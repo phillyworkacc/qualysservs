@@ -2,7 +2,7 @@
 import "./Footer.css"
 import Spacing from "@/components/Spacing/Spacing";
 import Link from "next/link";
-import { Mail, MailCheck, Phone } from "lucide-react";
+import { Mail, MailCheck, MessageCircle, Phone } from "lucide-react";
 import { CustomIcon } from "@/components/Icons/Icon";
 import { HTMLAttributeAnchorTarget, ReactNode } from "react";
 
@@ -50,6 +50,12 @@ export default function Footer() {
                      link="mailto:qualysservuk@gmail.com"
                      label="Send us an email"
                      icon={<Mail size={17} />}
+                  />
+                  <FooterLink
+                     link="/contact-us"
+                     label="Send us a message"
+                     target="_self"
+                     icon={<MessageCircle size={17} />}
                   />
                   <div className="text-xxs dfb align-center gap-5">
                      <Mail size={17} /> qualysservuk@gmail.com

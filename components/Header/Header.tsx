@@ -1,10 +1,10 @@
 'use client'
 import "./Header.css"
 import { BricolageGrotesqueFont } from "@/app/fonts";
-import { CustomIcon, QualysLogo } from "@/components/Icons/Icon"
-import { Phone } from "lucide-react";
-import Link from "next/link";
+import { CustomIcon } from "@/components/Icons/Icon"
+import { Mail } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Header() {
 	const router = useRouter();
@@ -30,7 +30,7 @@ export default function Header() {
 
                   <div className="box full dfb align-center justify-end gap-20">
                      <button className="xxs pd-12 pdx-15" onClick={visitContactUsPage}>
-                        <Phone size={15} /> Contact Us
+                        <Mail size={15} /> Contact Us
                      </button>
                   </div>
                </div>

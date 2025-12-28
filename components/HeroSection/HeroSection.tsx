@@ -28,7 +28,7 @@ export default function HeroSection () {
                      <li className="text-xxs pd-05 grey-5"><CheckCheck size={14} className="accent-color" strokeWidth={3} /> Training</li>
                   </ul>
                   <div className="box dfb gap-10 wrap">
-                     <Link href="/book">
+                     <Link href="/book-us">
                         <button className="xxs pd-13 pdx-3 tiny-shadow whitespace-nowrap">Explore Our Services</button>
                      </Link>
                      <Link href="/contact-us">
