@@ -39,3 +39,22 @@ export function contactUsConfirmation (contactInfo: Contact, date: number) {
    </body>
    </html>`;
 }
+
+export function ratingConfirmation (ratingInfo: Rating, date: number) {
+   return `
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <h1>Received Rating from ${ratingInfo.name}</h1>
+      <br>
+      <p><b>${ratingInfo.stars}</b> star(s)</p>
+      <p>${ratingInfo.feedback}</p>
+      <br>
+      <p><b>Rated on:</b> ${formatMilliseconds(date)}</p>
+   </body>
+   </html>`;
+}

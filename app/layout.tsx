@@ -1,9 +1,10 @@
 import "@/styles/globals.css"
-import "@/styles/landing.css"
+import "@/styles/site.css"
 import type { Metadata } from "next";
-import { InterFont } from "./fonts";
-import { DM_Sans } from "next/font/google";
+import { ManropeFont, OutfitFont } from "./fonts";
+import { ModalProvider } from "@/components/Modal/ModalContext";
 import { Toaster } from "sonner";
+import ChatBot from "@/components/ChatBot/ChatBot";
 
 export const metadata: Metadata = {
   title: {
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_GB",
-    url: "https://qualysservs.com",
+    url: "https://qualysservs.co.uk",
     siteName: "Qualys Services Ltd",
     title: "Qualys Services Ltd | Data Center, IT & Software Solutions",
     description:
@@ -48,17 +49,20 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={InterFont.className}>
-        <Toaster richColors position="top-center" />
-        {children}
-      </body>
-    </html>
+    <ModalProvider>
+      <html lang="en">
+        <body className={ManropeFont.className}>
+          {children}
+          <Toaster richColors position="top-center" />
+        </body>
+      </html>
+    </ModalProvider>
   );
 }

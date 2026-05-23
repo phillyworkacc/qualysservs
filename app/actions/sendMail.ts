@@ -1,5 +1,5 @@
 "use server"
-import { bookingEmailConfirmation, contactUsConfirmation } from "@/utils/emailHtmls";
+import { bookingEmailConfirmation, contactUsConfirmation, ratingConfirmation } from "@/utils/emailHtmls";
 import nodemailer from "nodemailer";
 
 export async function sendMail (subject: string, htmlContent: string) {
@@ -40,6 +40,15 @@ export async function sendBookingMail (bookingInfo: Booking) {
 export async function sendContactUsMail (contactInfo: Contact) {
    try {
       const sent = await sendMail(`Received Message from ${contactInfo.name}`, contactUsConfirmation(contactInfo, Date.now()));
+      return sent;
+   } catch (e) {
+      return false;
+   }
+}
+
+export async function sendReviewMail (ratingInfo: Rating) {
+   try {
+      const sent = await sendMail(`Received Rating from ${ratingInfo.name}`, ratingConfirmation(ratingInfo, Date.now()));
       return sent;
    } catch (e) {
       return false;

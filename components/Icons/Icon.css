@@ -2,6 +2,9 @@
    display: flex;
    align-items: center;
    justify-content: center;
+   user-select: none;
+   -webkit-user-drag: none;
+   overflow: hidden;
 }
 
 .icon img {
@@ -9,6 +12,9 @@
    height: 100%;
    object-fit: cover;
    object-position: center;
+   user-select: none;
+   -webkit-user-drag: none;
 }
 
+.icon.round { border-radius: 100% !important; }
 .icon.round img { border-radius: 100% !important; }
