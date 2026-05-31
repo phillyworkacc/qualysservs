@@ -18,6 +18,7 @@ export default function Header () {
       { href: "/", label: "Home" },
       { href: "/services", label: "Services" },
       { href: "/book", label: "Book" },
+      { href: "/our-work", label: "Our Work" },
       { href: "/review-us", label: "Review Us" },
    ];
    const [deviceType, setDeviceType] = useState<"mobile" | "desktop">("desktop");

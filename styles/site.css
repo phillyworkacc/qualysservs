@@ -162,3 +162,14 @@ section.image-section > .image-section-cover {
    background-color: #cacaca;
    padding: 40px 25px;
 }
+
+.bold-colour {
+   color: var(--accent-color);
+   cursor: pointer;
+   display: inline;
+   text-decoration: none;
+}
+
+.bold-colour:hover {
+   text-decoration: underline;
+}

@@ -30,5 +30,5 @@ export function BoldColour ({ children, styles, className }: CourseFormatsProps)
 
 export function BoldColourLink ({ children, styles, url, className }: CourseFormatsProps) {
    const router = useRouter();
-   return (<span className={`text-xxs bold-600 bold-colour ${className}`} style={styles} onClick={() => router.push(url!)}>{children}</span>)
+   return (<span className={`text-xxs bold-600 bold-colour ${className ?? ''}`} style={styles ?? {}} onClick={() => router.push(url!)}>{children}</span>)
 }
