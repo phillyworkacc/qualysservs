@@ -58,6 +58,9 @@ export default function RootLayout({
   return (
     <ModalProvider>
       <html lang="en">
+        <head>
+          <script defer data-web-identifier="ayom" data-party="visora" data-website-id="08200d43-e1ff-429c-a07b-f7b305835baf" src="https://visora.vercel.app/cdn/track.js"></script>
+        </head>
         <body className={ManropeFont.className}>
           {children}
           <Toaster richColors position="top-center" />
